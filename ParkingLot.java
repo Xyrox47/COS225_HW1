@@ -22,8 +22,13 @@ public class ParkingLot {
     public String toString(){
         return "";
     }
-    public int ParkCar(Array ParkingLot1, Car parkingCar){
-        ParkingLot1[0] = parkingCar;
+    public int ParkCar(Car parkingCar){
+        if (parkingCar.handicap = true){
+            System.out.println("True");
+        }
+        spots[0].parkedCar = parkingCar;
+        System.out.println(spots[0].parkedCar.make);
+
         
 
         return 1;
