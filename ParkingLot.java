@@ -67,7 +67,5 @@ public class ParkingLot {
         spots[space].parkedCar = null;
     }
 
-
-
-    }
+}
 
