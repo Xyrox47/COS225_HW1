@@ -20,24 +20,17 @@ public class ParkingLot {
         int handicapOpen = 0;
         int otherOpen = 0;
         for (int i = 0; i < 10; i++){
-
             if (i <= 1){
                 if (spots[i].parkedCar == null){
-                    // System.out.println(spots[i].parkedCar);
                     handicapOpen++;
                 }
             }
             else if (i <= 10){
                 if (spots[i].parkedCar == null){
                     otherOpen++;
-                    // System.out.println(spots[i].parkedCar==null);
-                    // Ask question
                 }
             }
         }
-            //String str2 = Integer.toString(otherOpen);
-            //String str1 = Integer.toString(handicapOpen);
-
     
             return ""+handicapOpen+" "+ otherOpen;
         }
@@ -56,7 +49,6 @@ public class ParkingLot {
                 }
             }
         }
-
         else{
             for(int i = 2; i<11;i++){
                 if(i==10){
@@ -66,7 +58,6 @@ public class ParkingLot {
                     spots[i].parkedCar = parkingCar;
                     return i;
                 }
-
             }
         }
         return 0;
