@@ -23,40 +23,55 @@ public class ParkingLot {
 
             if (i <= 1){
                 if (spots[i].parkedCar == null){
-                    System.out.println(spots[i].parkedCar);
+                    // System.out.println(spots[i].parkedCar);
                     handicapOpen++;
                 }
             }
             else if (i <= 10){
                 if (spots[i].parkedCar == null){
                     otherOpen++;
-                    System.out.println(spots[i].parkedCar);
+                    // System.out.println(spots[i].parkedCar==null);
                     // Ask question
                 }
             }
-            }
-            String str2 = Integer.toString(otherOpen);
-            String str1 = Integer.toString(handicapOpen);
+        }
+            //String str2 = Integer.toString(otherOpen);
+            //String str1 = Integer.toString(handicapOpen);
 
     
-            return str1+" "+ str2;
+            return ""+handicapOpen+" "+ otherOpen;
         }
 
 
     
     public int ParkCar(Car parkingCar){
-        if (parkingCar.handicap = true){
-            if (spots[0].parkedCar == null){
-                spots[0].parkedCar = parkingCar;
-                return 0;
+        if (parkingCar.handicap == true){
+            for(int i = 0; i < 3; i++){
+                if(i == 2){
+                    return -1;
+                }
+                else if(spots[i].parkedCar == null){
+                    spots[i].parkedCar = parkingCar;
+                    return i;
+                }
             }
         }
+
         else{
-            spots[2].parkedCar = parkingCar;
-            return 2;
+            for(int i = 2; i<11;i++){
+                if(i==10){
+                    return -1;
+                }
+                else if(spots[i].parkedCar == null){
+                    spots[i].parkedCar = parkingCar;
+                    return i;
+                }
+
+            }
         }
         return 0;
     }
+
     public void RemoveCar(int space){
         spots[space].parkedCar = null;
     }
